@@ -1,4 +1,4 @@
-//function to calcilate age
+//function to calculate age in months
 
 function calculate(age){
 let months=age*12;
@@ -12,7 +12,7 @@ let date=document.getElementById("date").value;
 let age =document.getElementById("age").value;
 let contact=document.getElementById("contact").value;
 let months=calculate(age);
-
+let greeting=document.getElementById("greeting").textContent;
 //local storage
 localStorage.setItem("name",name);
 localStorage.setItem("date",date);
@@ -30,9 +30,9 @@ document.getElementById("text").innerHTML= name + " your age is " + age +
             ". You are an adult. Age in months: " + months;
 
 }
-
-for(let i=0;i<=5;i++){
-document.getElementById("message").innerHTML +=name + " keep working hard";
+document.getElementById("greeting").innerHTML="Welcome back "+ name;
+for(let i=0;i<5;i++){
+document.getElementById("message").innerHTML +=name + " keep working hard<br>" ;
 
 }
 

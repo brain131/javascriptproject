@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="form.js"></script>
+    <title>form validation</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <p id="text"></p>
     <p id="message"></p>
  <form action=""class="form-wrapper">
-    <div>
+    
+    <div class="form-card">
+        <div>
+        <p id="greeting"></p>
+
+    </div>
   <div class="input-container">
-        <input type="text"placeholder="username"id="name">
+        <input type="text"placeholder="username"id="name"required>
     </div>
      <div class="input-container">
-        <input type="text"placeholder="age"id="age">
+        <input type="text"placeholder="age"id="age"required>
     </div>
      <div class="input-container">
-        <input type="date"placeholder="Date of birth"id="date">
+        <input type="date"placeholder="Date of birth"id="date"required>
     </div>
      <div class="input-container">
-        <input type="number"placeholder="contact"id="contact">
+        <input type="number"placeholder="contact"id="contact"required>
     </div>
     <div class="input-container">
         <button type="button"onclick="display()">Submit</button>
 
     </div>
-
+   
     </div>
  </form>   
 
