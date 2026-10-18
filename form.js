@@ -10,13 +10,14 @@ function display(){
 let name=document.getElementById("name").value;
 let date=document.getElementById("date").value;
 let age =document.getElementById("age").value;
+let contact=document.getElementById("contact").value;
 let months=calculate(age);
 
 //local storage
 localStorage.setItem("name",name);
-let savedName=localStorage.getItem("name");
-
-
+localStorage.setItem("date",date);
+localStorage.setItem("age",age);
+localStorage.setItem("contact",contact);
 
 //if statement
 if(age>=18){
@@ -30,16 +31,20 @@ document.getElementById("text").innerHTML= name + " your age is " + age +
 
 }
 
+for(let i=0;i<=5;i++){
+document.getElementById("message").innerHTML +=name + " keep working hard";
+
+}
 
 }
 window.onload =()=>{
 
 document.getElementById("name").value=localStorage.getItem("name") || "";
+document.getElementById("age").value=localStorage.getItem("age") || "";
+document.getElementById("date").value=localStorage.getItem("date") || "";
+document.getElementById("contact").value=localStorage.getItem("contact") || "";
 
 };
-
-
-
 
 
 
