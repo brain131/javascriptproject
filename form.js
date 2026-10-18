@@ -1,4 +1,4 @@
-//funtion to cals
+//function to calcilate age
 
 function calculate(age){
 let months=age*12;
@@ -11,6 +11,12 @@ let name=document.getElementById("name").value;
 let date=document.getElementById("date").value;
 let age =document.getElementById("age").value;
 let months=calculate(age);
+
+//local storage
+localStorage.setItem("name",name);
+let savedName=localStorage.getItem("name");
+
+
 
 //if statement
 if(age>=18){
@@ -26,7 +32,11 @@ document.getElementById("text").innerHTML= name + " your age is " + age +
 
 
 }
+window.onload =()=>{
 
+document.getElementById("name").value=localStorage.getItem("name") || "";
+
+};
 
 
 
