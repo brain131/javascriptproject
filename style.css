@@ -16,7 +16,7 @@ margin-top:40px;
 
 
 }
-input{
+.input-container>input{
 width:100%;
 height: 6vh;
 border-radius: 10px;
@@ -24,7 +24,7 @@ border:1px solid black ;
 
 
 }
-button{
+.input-container>button{
 padding: 10px;
 border: none;
 border-radius: 15px;
@@ -32,4 +32,8 @@ background-color: rgb(2, 96, 96);
 color: white;
 
 }
+.search{
+margin-top: 20px;
+text-align: center;
 
+}

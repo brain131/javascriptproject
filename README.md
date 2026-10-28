@@ -28,7 +28,7 @@ This project is a beginner-friendly web application that collects user informati
 
 
  Open the project folder in your code editor.
- Open `index.html` in your web browser, or use the Live Server extension in Visual Studio Code.
+ Open index.html in your web browser, or use the Live Server extension in Visual Studio Code.
 
 ### How to Use
 

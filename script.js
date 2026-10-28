@@ -45,7 +45,16 @@ document.getElementById("date").value=localStorage.getItem("date") || "";
 document.getElementById("contact").value=localStorage.getItem("contact") || "";
 
 };
+async function search() {
+  try{
+    const postId=document.getElementById("search")
+const response=await fetch(`https://jsonplaceholder.typicode.com/posts/${}`)
 
+  }
+    
+
+    
+}
 
 
 
