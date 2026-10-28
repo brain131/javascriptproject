@@ -47,14 +47,25 @@ document.getElementById("contact").value=localStorage.getItem("contact") || "";
 };
 async function search() {
   try{
-    const postId=document.getElementById("search")
-const response=await fetch(`https://jsonplaceholder.typicode.com/posts/${}`)
+    const postId=document.getElementById("inputData").value;
+const response=await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+    if(!response.ok){
+      throw new error("could not fetch resource");
+    }
+    const data=await response.json();
+    console.log("Fetched post",data);
+    document.getElementById("title").textContent=data.title;
+    document.getElementById("body").textContent=data.body
+
 
   }
-    
+catch(error){
+  console.log("Search error", error);
+}  
+    }
 
     
-}
+
 
 
 
