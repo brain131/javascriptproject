@@ -65,7 +65,55 @@ catch(error){
     }
 
     
+//start of class 
+
+class money {
+  #balance;
+constructor(balance,accountNumber){
+this.#balance=balance
+this.accountNumber=accountNumber
+
+}
+deposit(amount){
+this.#balance-=amount;
+
+}
+withdraw(amount){
+if(amount>this.#balance){
+  return "insufficient funds"
+
+}
+else{
+    this.#balance=this.#balance-amount;
+return `you have withdrawn ${amount} account balance is${this.#balance}`
+
+}
 
 
 
+}
+
+}
+function processAccount(){
+let accountNumber=document.getElementById("accountNumber").value;
+let balance=Number(document.getElementById("balance").value);
+let deposit=Number(document.getElementById("deposit").value);
+let withdraw=Number(document.getElementById("withdraw").value);
+let b1=new money(balance,accountNumber);
+let newBalance=(balance+deposit)-withdraw;
+let depoBalance=balance+deposit;
+if(accountNumber===""){
+document.getElementById("message").innerHTML="enter a valid account number";
+return;
+
+}
+if(withdraw>depoBalance){
+  document.getElementById("message1").innerHTML="insufficient funds to withdraw";
+  return false;
+}
+document.getElementById("message2").innerHTML=`your balance is ${balance}
+ you deposited ${deposit} you withdrew ${withdraw} your new balance ${newBalance}`
+
+}
+//end of class and oop
 
