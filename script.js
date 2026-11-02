@@ -118,18 +118,32 @@ document.getElementById("message2").innerHTML=`your balance is ${balance}
 //end of class and oop
 
 //start of cookie
-let firstName=document.getElementById("firstName");
-let secondName=document.getElementById("secondName");
+const firstName=document.getElementById("firstName")
+const secondName=document.getElementById("secondName");
 
-function submit(){
-  setCookie("firstName",firstName.value,365);
+function submitForm(){
+  setCookie("firstName",firstName.value,365)
   setCookie("secondName",secondName.value,365)
   setTimeout(()=>{
-    window.location.href("welcome.html");
+    window.location.href="welcome.html";
   
   },3000);
 
 }
+function setCookie(name,value,daysToLive){
+const date=new Date();
+date.setTime(date.getTime()+(daysToLive *24*60*60*1000));
+
+    let expires = "expires=" + date.toUTCString();
+
+    document.cookie = `${name}=${encodeURIComponent(value)}; ${expires}; path=/`;
+
+}
+
+
+
+
+
 
 //end of cookie
 
