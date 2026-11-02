@@ -117,3 +117,17 @@ document.getElementById("message2").innerHTML=`your balance is ${balance}
 }
 //end of class and oop
 
+//start of cookie
+let first=document.getElementById("firstName");
+let secondName=document.getElementById("secondName");
+
+
+
+//end of cookie
+
+
+
+
+
+
+
