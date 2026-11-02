@@ -118,10 +118,18 @@ document.getElementById("message2").innerHTML=`your balance is ${balance}
 //end of class and oop
 
 //start of cookie
-let first=document.getElementById("firstName");
+let firstName=document.getElementById("firstName");
 let secondName=document.getElementById("secondName");
 
+function submit(){
+  setCookie("firstName",firstName.value,365);
+  setCookie("secondName",secondName.value,365)
+  setTimeout(()=>{
+    window.location.href("welcome.html");
+  
+  },3000);
 
+}
 
 //end of cookie
 
